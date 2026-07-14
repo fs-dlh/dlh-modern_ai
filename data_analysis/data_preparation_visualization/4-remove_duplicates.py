@@ -2,10 +2,8 @@
 """ Module for removing duplicate rows from a DataFrame. """
 
 
-
 def remove_duplicates(df):
-    """
-    Remove all duplicate rows from the DataFrame.
+    """ Remove all duplicate rows from the DataFrame.
 
     Args:
         df : DataFrame to deduplicate.
