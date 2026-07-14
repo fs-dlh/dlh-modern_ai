@@ -28,21 +28,16 @@ def plot_categorical_distributions(df, columns_to_plot=None):
 
     fig, axes = plt.subplots(n_rows, n_cols, figsize=(15, 5*n_rows))
 
-    # Flatten axes for easy iteration
     if n_rows == 1 and n_cols == 1:
         axes_flat = [axes]
     else:
         axes_flat = axes.flatten()
-    # Plot each column
+
     for i, col in enumerate(columns_to_plot):
         ax = axes_flat[i]
-        # Count occurrences and sort by value (optional)
         counts = df[col].value_counts()
-        # Plot bar chart
         ax.bar(counts.index.astype(str), counts.values)
         ax.set_title(col)
-        ax.set_ylabel('Count')
-        # Rotate x-axis labels to avoid overlap
         ax.tick_params(axis='x', rotation=45)
 
     # Hide any unused subplots
