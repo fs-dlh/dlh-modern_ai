@@ -41,7 +41,6 @@ def plot_categorical_distributions(df, columns_to_plot=None):
         # Plot bar chart
         ax.bar(counts.index.astype(str), counts.values)
         ax.set_title(col)
-        ax.set_xlabel('Categories')
         ax.set_ylabel('Count')
         # Rotate x-axis labels to avoid overlap
         ax.tick_params(axis='x', rotation=45)
@@ -50,5 +49,8 @@ def plot_categorical_distributions(df, columns_to_plot=None):
     for j in range(i + 1, len(axes_flat)):
         axes_flat[j].set_visible(False)
 
+    plt.tight_layout()
     plt.savefig("Task_7.png")
     plt.show()
+
+    return None
