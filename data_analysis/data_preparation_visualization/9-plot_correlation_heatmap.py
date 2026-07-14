@@ -28,6 +28,3 @@ def plot_correlation_heatmap(df):
 
     plt.title("Correlation Matrix")
     plt.show()
-
-
-    return None
