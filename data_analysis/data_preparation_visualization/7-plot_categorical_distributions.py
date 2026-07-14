@@ -50,6 +50,5 @@ def plot_categorical_distributions(df, columns_to_plot=None):
     for j in range(i + 1, len(axes_flat)):
         axes_flat[j].set_visible(False)
 
-    plt.tight_layout()
     plt.savefig("Task_7.png")
     plt.show()
