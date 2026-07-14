@@ -15,8 +15,8 @@ def plot_correlation_heatmap(df):
     """
     plt.figure(figsize=(6, 5))
 
-    numeric_df = df.select_dtypes(include=['float64', 'int64'])
-    corr_matrix = numeric_df.corr()
+    ndf = df.select_dtypes(include=['float64', 'int64'])
+    corr_matrix = ndf.corr()
 
     sns.heatmap(
         corr_matrix,
@@ -26,5 +26,8 @@ def plot_correlation_heatmap(df):
         vmax=1
         )
 
-    plt.tight_layout()
+    plt.title("Correlation Matrix")
     plt.show()
+
+
+    return None
