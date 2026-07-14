@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module for creating new features from the dataset.
-"""
-
+""" Module for creating new features from the dataset. """
 import pandas as pd
 
 
