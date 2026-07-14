@@ -23,7 +23,7 @@ def chi_square_tests(df):
 
     for feature in features:
         con_tab = pd.crosstab(df[feature], df['Churn'])
-        test_result = stats.chi2_contingency(con_tab)
-        results[feature] = test_result[1]
+        chi2, p, dof, expected = stats.chi2_contingency(con_tab)
+        results[feature] = p
 
     return results
