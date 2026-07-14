@@ -38,6 +38,6 @@ def create_features(df):
         labels=['0-12', '13-24', '25-48', '49-60', '60+']
         )
 
-    df.drop(columns=service_cols + ['tenure'])
+    df = df.drop(columns=service_cols + ['tenure'])
 
     return df
