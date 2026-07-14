@@ -20,11 +20,10 @@ def plot_numeric_vs_churn(df, col):
     churn_no = df[df['Churn'] == 'No'][col]
     churn_yes = df[df['Churn'] == 'Yes'][col]
 
-    plt.hist(churn_no, bins=30, alpha=0.6, label='No', color='skyblue', edgecolor='black')
-    plt.hist(churn_yes, bins=30, alpha=0.6, label='Yes', color='salmon', edgecolor='black')
+    plt.hist([churn_no, churn_yes], bins=30, label=['No', 'Yes'])
 
     plt.title(f"{col} Distribution by Churn")
     plt.xlabel(col)
     plt.legend(title='Churn')
     plt.show()
-    
+    return None
