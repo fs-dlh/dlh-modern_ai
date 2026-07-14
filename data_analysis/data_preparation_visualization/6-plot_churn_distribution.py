@@ -23,7 +23,6 @@ def plot_churn_distribution(df):
 
     plt.bar(churn_counts.index, churn_counts.values, color=colors)
 
-    plt.xlabel('Churn')
     plt.ylabel('Count')
     plt.title('Churn Distribution')
 
