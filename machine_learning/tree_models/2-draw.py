@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ Module to display the textual structure of a trained decision tree. """
-from sklearn.tree import export_text
+from sklearn import tree
 
 
 def draw(clf, feature_names, class_names):
@@ -15,7 +15,7 @@ def draw(clf, feature_names, class_names):
     Returns:
         None: The function prints the tree structure to stdout.
     """
-    tree_text = export_text(
+    tree_text = tree.export_text(
         clf,
         feature_names=list(feature_names),
         class_names=list(class_names)
