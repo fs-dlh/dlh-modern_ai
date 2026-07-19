@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+""" Module to initialize boosting classifiers for comparison. """
+
+from sklearn import ensemble
+import xgboost as xgb
+import lightgbm as lgb
+
+
+def compare_boosting_classifiers(name, n_estimators, random_state):
+    """ Initialize and return an untrained boosting classifier.
+
+    Args:
+        name : Name of the boosting algorithm.
+        n_estimators : Number of boosting iterations.
+        random_state : Random seed for reproducibility.
+
+    Returns:
+        An untrained instance of boosting classifier.
+
+    Raises:
+        ValueError: If the provided name is not one of the allowed values.
+    """
+    if name == "adaboost":
+        return ensemble.AdaBoostClassifier(
+            n_estimators=n_estimators,
+            random_state=random_state
+        )
+    elif name == "gradientboosting":
+        return ensemble.GradientBoostingClassifier(
+            n_estimators=n_estimators,
+            random_state=random_state
+        )
+    elif name == "xgboost":
+        return xgb.XGBClassifier(
+            n_estimators=n_estimators,
+            random_state=random_state
+        )
+    elif name == "lightgbm":
+        return lgb.LGBMClassifier(
+            n_estimators=n_estimators,
+            random_state=random_state,
+            verbose=-1
+        )
+    else:
+        raise ValueError(f"Unknown model name '{name}'")
