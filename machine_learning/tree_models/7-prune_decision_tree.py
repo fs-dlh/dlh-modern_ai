@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module to train and evaluate decision trees with cost-complexity pruning."""
-
 from sklearn import tree
+train_tree = __import__('1-train').train_tree
 
 
 def prune_and_evaluate_trees(X_train, y_train, X_test, y_test,
@@ -36,7 +36,7 @@ def prune_and_evaluate_trees(X_train, y_train, X_test, y_test,
             min_samples_split=min_samples_split,
             ccp_alpha=alpha
         )
-        clf.fit(X_train, y_train)
+        train_tree(clf, X_train, y_train)
         clfs.append(clf)
         train_scores.append(clf.score(X_train, y_train))
         test_scores.append(clf.score(X_test, y_test))
