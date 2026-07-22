@@ -4,7 +4,7 @@ from sklearn import linear_model
 
 
 def Linear_Regression():
-    """ Creates and returns an untrained LinearRegression model from scikit-learn.
+    """ Creates and returns an untrained LinearRegression.
 
     Returns:
         LinearRegression: An instance of sklearn.linear_model.
