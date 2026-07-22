@@ -11,8 +11,8 @@ def compare_boosting_classifiers(name, n_estimators, random_state):
 
     Args:
         name : Name of the boosting algorithm.
-        n_estimators : Number of boosting iterations.
-        random_state : Random seed for reproducibility.
+        n_estimators : Number of iterations.
+        random_state : Random seed.
 
     Returns:
         An untrained instance of boosting classifier.
