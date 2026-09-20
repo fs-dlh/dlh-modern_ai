@@ -93,6 +93,7 @@ def train_transfer_model():
     callbacks = [
         keras.callbacks.EarlyStopping(
             monitor="val_accuracy",
+            baseline=0.85,
             patience=5,
             restore_best_weights=True,
         ),
