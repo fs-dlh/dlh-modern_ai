@@ -13,7 +13,6 @@ def unfreeze_top_layers(model, n_layers):
     Returns:
         None
     """
-    model.trainable = True
 
     if n_layers <= 0:
         for layer in model.layers:
