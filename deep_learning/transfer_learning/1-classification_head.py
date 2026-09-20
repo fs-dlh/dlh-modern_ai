@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Module for adding a classification head to a feature extractor. """
-
 from tensorflow import keras
 
 
@@ -8,8 +7,8 @@ def add_classification_head(base_model, num_classes):
     """ Attach a classification head to a pretrained feature extractor.
 
     Args:
-        base_model (keras.Model): Model outputting a pooled feature vector.
-        num_classes (int): Number of output classes.
+        base_model : Model outputting a pooled feature vector.
+        num_classes : Number of output classes.
 
     Returns:
         keras.Model: A new model ready for classification.

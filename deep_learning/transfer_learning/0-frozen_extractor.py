@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Frozen pretrained CNN feature extractor. """
-
 from tensorflow import keras
 
 
